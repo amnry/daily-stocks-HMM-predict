@@ -23,9 +23,9 @@ The Viterbi algorithm is used for finding the most likely sequence of hidden sta
 ### Induction Step
 The induction step updates the highest probability of any path that reaches each state \(i\) at time \(t\), which includes state \(j\) at time \(t-1\).
 
-![Induction Step Formula 1](https://latex.codecogs.com/svg.latex?\delta_t(i)%20=%20\max_{j}%20\left[%20\delta_{t-1}(j)%20\cdot%20a_{ji}%20\right]%20\cdot%20b_i(O_t))
+![Induction Step Formula 1](https://latex.codecogs.com/svg.latex?\color{white}\delta_t(i)%20=%20\max_{j}%20\left[%20\delta_{t-1}(j)%20\cdot%20a_{ji}%20\right]%20\cdot%20b_i(O_t))
 
-![Induction Step Formula 2](https://latex.codecogs.com/svg.latex?\psi_t(i)%20=%20\arg\max_{j}%20\left[%20\delta_{t-1}(j)%20\cdot%20a_{ji}%20\right])
+![Induction Step Formula 2](https://latex.codecogs.com/svg.latex?\color{white}\psi_t(i)%20=%20\arg\max_{j}%20\left[%20\delta_{t-1}(j)%20\cdot%20a_{ji}%20\right])
 
 ## Baum-Welch Algorithm
 
@@ -34,18 +34,18 @@ The Baum-Welch algorithm is an Expectation-Maximization (EM) algorithm used for 
 ### Expectation Step
 Calculate the expected number of transitions from state \(i\) to state \(j\) and the expected number of times in state \(i\).
 
-![Expectation Step Formula 1](https://latex.codecogs.com/svg.latex?\xi_t(i,%20j)%20=%20\frac{\alpha_t(i)%20\cdot%20a_{ij}%20\cdot%20b_j(O_{t+1})%20\cdot%20\beta_{t+1}(j)}{\sum_{i=1}^N%20\sum_{j=1}^N%20\alpha_t(i)%20\cdot%20a_{ij}%20\cdot%20b_j(O_{t+1})%20\cdot%20\beta_{t+1}(j)})
+![Expectation Step Formula 1](https://latex.codecogs.com/svg.latex?\color{white}\xi_t(i,%20j)%20=%20\frac{\alpha_t(i)%20\cdot%20a_{ij}%20\cdot%20b_j(O_{t+1})%20\cdot%20\beta_{t+1}(j)}{\sum_{i=1}^N%20\sum_{j=1}^N%20\alpha_t(i)%20\cdot%20a_{ij}%20\cdot%20b_j(O_{t+1})%20\cdot%20\beta_{t+1}(j)})
 
-![Expectation Step Formula 2](https://latex.codecogs.com/svg.latex?\gamma_t(i)%20=%20\frac{\alpha_t(i)%20\cdot%20\beta_t(i)}{\sum_{i=1}%20^N%20\alpha_t(i)%20\cdot%20\beta_t(i)})
+![Expectation Step Formula 2](https://latex.codecogs.com/svg.latex?\color{white}\gamma_t(i)%20=%20\frac{\alpha_t(i)%20\cdot%20\beta_t(i)}{\sum_{i=1}%20^N%20\alpha_t(i)%20\cdot%20\beta_t(i)})
 
 ### Maximization Step
 Re-estimate the parameters of the HMM.
 
-![Maximization Step Formula 1](https://latex.codecogs.com/svg.latex?\hat{a}_{ij}%20=%20\frac{\sum_{t=1}^{T-1}%20\xi_t(i,%20j)}{\sum_{t=1}^{T-1}%20\gamma_t(i)})
+![Maximization Step Formula 1](https://latex.codecogs.com/svg.latex?\color{white}\hat{a}_{ij}%20=%20\frac{\sum_{t=1}^{T-1}%20\xi_t(i,%20j)}{\sum_{t=1}^{T-1}%20\gamma_t(i)})
 
-![Maximization Step Formula 2](https://latex.codecogs.com/svg.latex?\hat{b}_j(k)%20=%20\frac{\sum_{t=1,%20O_t%20=%20k}^{T}%20\gamma_t(j)}{\sum_{t=1}^{T}%20\gamma_t(j)})
+![Maximization Step Formula 2](https://latex.codecogs.com/svg.latex?\color{white}\hat{b}_j(k)%20=%20\frac{\sum_{t=1,%20O_t%20=%20k}^{T}%20\gamma_t(j)}{\sum_{t=1}^{T}%20\gamma_t(j)})
 
-![Maximization Step Formula 3](https://latex.codecogs.com/svg.latex?\hat{\pi}_i%20=%20\gamma_1(i))
+![Maximization Step Formula 3](https://latex.codecogs.com/svg.latex?\color{white}\hat{\pi}_i%20=%20\gamma_1(i))
 
 ## Usage
 
