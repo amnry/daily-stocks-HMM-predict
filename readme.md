@@ -9,12 +9,12 @@ The Forward-Backward algorithm is used for computing the posterior probabilities
 ### Forward Step
 The forward probability \(\alpha_t(i)\) is the probability of being in state \(i\) at time \(t\) and having observed the sequence \(O_1, O_2, ..., O_t\).
 
-![Forward Step Formula](https://latex.codecogs.com/svg.latex?\alpha_t(i)%20=%20P(O_1,%20O_2,%20...,%20O_t,%20X_t%20=%20S_i%20|%20\lambda))
+![Forward Step Formula](https://latex.codecogs.com/svg.latex?\color{white}\alpha_t(i)%20=%20P(O_1,%20O_2,%20...,%20O_t,%20X_t%20=%20S_i%20|%20\lambda))
 
 ### Backward Step
 The backward probability \(\beta_t(i)\) is the probability of the ending partial sequence from \(t+1\) to \(T\), given the state \(i\) at time \(t\).
 
-![Backward Step Formula](https://latex.codecogs.com/svg.latex?\beta_t(i)%20=%20P(O_{t+1},%20O_{t+2},%20...,%20O_T%20|%20X_t%20=%20S_i,%20\lambda))
+![Backward Step Formula](https://latex.codecogs.com/svg.latex?\color{white}\beta_t(i)%20=%20P(O_{t+1},%20O_{t+2},%20...,%20O_T%20|%20X_t%20=%20S_i,%20\lambda))
 
 ## Viterbi Algorithm
 
