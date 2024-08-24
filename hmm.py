@@ -1,3 +1,14 @@
+import numpy as np
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import yfinance as yf
+from hmmlearn.hmm import GaussianHMM
+
+import warnings
+warnings.filterwarnings('ignore')
+
+
 # Clean up the columns and index
 data = data.reset_index()  # Reset index to work with columns
 data.columns = data.columns.str.replace(' ', '')

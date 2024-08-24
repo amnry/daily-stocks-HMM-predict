@@ -6,8 +6,8 @@ import joblib
 
 tickers = ["AAPL", "MSFT", "AMZN", "GOOGL", "GOOG", "META", "TSLA", "JPM", "NVDA", "UNH"]
 
-def train_hmm():
-    data = pd.read_csv("historical_data.csv", header=[0, 1], index_col=0)
+def train_hmm(data):
+    # data = pd.read_csv("historical_data.csv", header=[0, 1], index_col=0)
     data.columns = data.columns.to_flat_index()
     
     for ticker in tickers:
