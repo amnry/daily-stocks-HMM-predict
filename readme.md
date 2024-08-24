@@ -47,9 +47,5 @@ Re-estimate the parameters of the HMM.
 
 ![Maximization Step Formula 3](https://latex.codecogs.com/svg.latex?\color{white}\hat{\pi}_i%20=%20\gamma_1(i))
 
-## Usage
-
-To use this repository, clone it and follow the instructions in the provided notebooks and scripts. Ensure you have the required dependencies installed.
-
-```bash
-git clone https://github.com/yourusername/hmm-snp500.git
+<!-- ```bash
+git clone https://github.com/yourusername/hmm-snp500.git -->
