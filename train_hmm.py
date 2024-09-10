@@ -1,10 +1,12 @@
 
 import pandas as pd
+import yfinance as yf
 from hmmlearn.hmm import GaussianHMM
 import numpy as np
 import joblib
 
 tickers = ["AAPL", "MSFT", "AMZN", "GOOGL", "GOOG", "META", "TSLA", "JPM", "NVDA", "UNH"]
+data = yf.download(tickers=tickers, period="5yr")
 
 def train_hmm(data):
     # data = pd.read_csv("historical_data.csv", header=[0, 1], index_col=0)
@@ -26,5 +28,3 @@ def train_hmm(data):
         
         joblib.dump(model, f"{ticker}_hmm.pkl")
 
-if __name__ == "__main__":
-    train_hmm()
